@@ -8,7 +8,7 @@ db = 'ecommerce.db'
 
 
 import datetime
-
+#comentario
 #Reads the test_class.csv file
 Category.read('data/'+ db)
 
