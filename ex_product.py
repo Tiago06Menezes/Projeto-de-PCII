@@ -3,7 +3,7 @@ from classes.product import Product
 from classes.category import Category 
 test_class = Product
 ob = '135;official;462;2'
-db = 'ecommerce.db'
+db = 'trabalho.db'
 
 
 import datetime

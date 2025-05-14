@@ -1,20 +1,42 @@
+# -*- coding: utf-8 -*-
+"""
+@author: António Brito / Carlos Bragança
+(2021)
+#objective: Test classes based on generic class Gclass
 
-from classes.product import Product
-from classes.customerorder import CustomerOrder
-from classes.orderproduct import OrderProduct
-test_class = OrderProduct
+"""""
+db = 'business.db'
 
+#Uncomment to test class Person (select next 4 lines and press ctrl-1)
+from classes.person import Person
+test_class = Person
+ob = '100;Antonio Silva;1966-03-12;4000.0'
+db = 'person.db'
 
-ob = '1;5816;135;2.0;462.0'  
-db = 'ecommerce.db'
+#Uncomment to test class Cliente (select next two lines and press ctrl-1)
+# from classes.cliente import Cliente
+# test_class = Cliente
+# ob = '600;Xavier;1958-03-20;5000.0'
 
+#Uncomment to test class Product
+# from classes.product import Product
+# test_class = Product
+# ob='Product1;10.9;100'
+
+#Uncomment to test class Customer_login
+# from classes.customer import Customer
+# test_class = Customer
+
+#Uncomment to test class Order
+# from classes.customerorder import ustomerOrder
+# from classes.customer import Customer
+# Customer.read('data/business.db')
+# test_class = Order
 
 import datetime
 
-# Reads the test_class.csv file
-Product.read('data/'+ db)
-CustomerOrder.read('data/'+ db)
-OrderProduct.read('data/'+ db)
+#Reads the test_class.csv file
+test_class.read('data/' + db)
 
 op = ''
 while op != 'q':

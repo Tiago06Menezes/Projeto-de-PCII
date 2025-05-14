@@ -4,7 +4,7 @@ test_class = Customer
 
 
 ob = '1;João Silva;joao@email.com;Rua Principal, 123'
-db = 'ecommerce.db'
+db ='trabalho.db'
 
 
 import datetime

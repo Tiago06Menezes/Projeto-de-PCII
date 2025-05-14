@@ -1,18 +1,25 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon May 12 16:26:14 2025
 
-from classes.customerorder import CustomerOrder
+@author: ACER
+"""
+from classes.product import Product
 from classes.customer import Customer
-test_class = CustomerOrder
+from classes.orders import Orders
+test_class = Orders
 
-ob = '1;1451'
-db = 'ecommerce.db'
+
+ob = '10;1300;330;2'
+db ='trabalho.db'
 
 
 import datetime
 
-# Reads the test_class.csv file
+#Reads the test_class.csv file
+Orders.read('data/'+ db)
+Product.read('data/'+ db)
 Customer.read('data/'+ db)
-CustomerOrder.read('data/'+ db)
-
 op = ''
 while op != 'q':
     print('')
@@ -134,4 +141,3 @@ while op != 'q':
                 test_class.current(fobjs[0].id)
                 for obj in fobjs:
                     print(obj)
-# print("Clientes disponíveis:", Customer.lst)

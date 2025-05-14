@@ -4,11 +4,11 @@ test_class = Category
 
 
 ob = '1;João Silva;joao@email.com;Rua Principal, 123'
-db = 'ecommerce.db'
+db = 'trabalho.db'
 
 
 import datetime
-#comentario
+
 #Reads the test_class.csv file
 Category.read('data/'+ db)
 
