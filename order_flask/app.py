@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May 16 16:05:38 2025
+
+@author: ACER
+"""
 from flask import Flask, render_template, request, session
 from datafile import filename
 from classes.customer import Customer
@@ -15,7 +21,7 @@ Orders.read(filename + 'trabalho.db')
 Customer.read(filename + 'trabalho.db')
 Product.read(filename + 'trabalho.db')
 Category.read(filename + 'trabalho.db')
-Userlogin.read(filename + 'business.db')
+Userlogin.read(filename + 'trabalho.db')
 app.secret_key = 'BAD_SECRET_KEY'
 @app.route("/")
 def index():
@@ -50,3 +56,4 @@ if __name__ == '__main__':
     app.run()
     
     
+
