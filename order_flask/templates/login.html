@@ -6,6 +6,7 @@
 
 {% block content %}
     <div class = "dados">
+        <img src="{{ url_for('static', filename='images/original.jpg') }}" alt="Logo" style="width: 400px; margin-bottom: 50px;">
         <br><br>
         <h1>Login</h1>
         <br>
@@ -19,6 +20,6 @@
             <button type="submit" class="button1">Login</button>
         </form>
         <br><br>
-        <h3 style="color: red;">{{resul}}</h3>
+        <h3 style="color: pink;">{{resul}}</h3>
     </div>
 {% endblock %}
