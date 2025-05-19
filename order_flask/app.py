@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, session
 from datafile import filename
 from classes.customer import Customer
-from classes.orders import Orders
+from classes.orderproduct import OrderProduct
 from classes.category import Category
 from classes.product import Product
+from classes.customerorder import CustomerOrder
 from classes.userlogin import Userlogin
 from subs.apps_gform import apps_gform 
 from subs.apps_subform import apps_subform 
@@ -11,10 +12,11 @@ from subs.apps_userlogin import apps_userlogin
 
 app = Flask(__name__)
 
-Orders.read(filename + 'trabalho.db')
+OrderProduct.read(filename + 'trabalho.db')
 Customer.read(filename + 'trabalho.db')
 Product.read(filename + 'trabalho.db')
 Category.read(filename + 'trabalho.db')
+CustomerOrder.read(filename + 'trabalho.db')
 Userlogin.read(filename + 'business.db')
 app.secret_key = 'BAD_SECRET_KEY'
 @app.route("/")

@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request, session
 from datafile import filename
 from classes.customer import Customer
-from classes.product import Product
-from classes.orders import Orders
+from classes.orderproduct import OrderProduct
 from classes.category import Category
+from classes.product import Product
+from classes.customerorder import CustomerOrder
 from classes.userlogin import Userlogin
 
 prev_option = ""
