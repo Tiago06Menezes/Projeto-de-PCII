@@ -25,7 +25,12 @@ class Product(Gclass):
         self._product_name = product_name
         self._price = float(price)
         self._category_id = int(category_id)
-       
+        #if not Category.obj:  # Se a lista de categorias estiver vazia
+            #Category.read('data/ecommerce.db')  # Carregar categorias do banco de dados
+        if int(category_id) not in Category.lst:
+            print(f'Category {category_id} not found')
+            return
+        # Add the new object to the Product list
         Product.obj[id] = self
         Product.lst.append(id)
     # Object properties
@@ -49,8 +54,7 @@ class Product(Gclass):
     @property
     def category_id(self):
         return self._category_id
-    
+
     @category_id.setter
     def category_id(self, category_id):
         self._category_id = int(category_id)
-    
