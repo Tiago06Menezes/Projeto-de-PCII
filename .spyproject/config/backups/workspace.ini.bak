@@ -1,0 +1,12 @@
+[workspace]
+restore_data_on_startup = True
+save_data_on_exit = True
+save_history = True
+save_non_project_files = False
+project_type = 'empty-project-type'
+recent_files = ['ex_category.py', 'ex_customer.py', 'ex_customerorder.py', 'ex_orderproduct.py', 'ex_product.py', 'classes\\orderproduct.py', 'classes\\product.py', 'app.py']
+
+[main]
+version = 0.2.0
+recent_files = []
+

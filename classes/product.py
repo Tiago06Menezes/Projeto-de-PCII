@@ -25,8 +25,8 @@ class Product(Gclass):
         self._product_name = product_name
         self._price = float(price)
         self._category_id = int(category_id)
-        #if not Category.obj:  # Se a lista de categorias estiver vazia
-            #Category.read('data/ecommerce.db')  # Carregar categorias do banco de dados
+        if not Category.obj:  # Se a lista de categorias estiver vazia
+            Category.read('data/trabalho.db')  # Carregar categorias do banco de dados
         if int(category_id) not in Category.lst:
             print(f'Category {category_id} not found')
             return

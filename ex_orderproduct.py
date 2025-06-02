@@ -6,7 +6,7 @@ from classes.orderproduct import OrderProduct
 test_class = OrderProduct
 
 
-ob = '1;5816;135;2.0;462.0'  
+ob = '1;5816;135;2;462.0'  
 db = 'trabalho.db'
 
 
