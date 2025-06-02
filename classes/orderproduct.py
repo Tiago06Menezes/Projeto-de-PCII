@@ -11,19 +11,19 @@ class OrderProduct(Gclass):
     pos = 0
     sortkey = ''
     # class attributes, identifier id, attribute must be the first on the list
-    att = ['_id', '_order_id','_product_id','_quantity','_price_line']
+    att = ['_id', '_order_id','_products_id','_quantity','_price_line']
     # Class header title
     header = 'OrderProduct'
     # field description for use in, for example, input form
-    des = ['Id','Order_id','Product_id','Quantity','Price_line']
+    des = ['Id','Order_id','Products_id','Quantity','Price_line']
     # Constructor: Called when an object is instantiated
-    def __init__(self,id,order_id, product_id, quantity, price_line ):
+    def __init__(self,id,order_id, products_id, quantity, price_line ):
         super().__init__()
         # Object attributes
         id = CustomerOrder.get_id(id)
         self._id = id
         self._order_id=order_id
-        self._product_id=product_id
+        self._product_id=products_id
         self._quantity=quantity
         self._price_line = price_line
 
@@ -44,7 +44,7 @@ class OrderProduct(Gclass):
         return self._order_id
     # product property getter method
     @property
-    def product_id(self):
+    def products_id(self):
         return self._products_id
     # quantity property getter method
     @property

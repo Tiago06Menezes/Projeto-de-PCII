@@ -8,11 +8,11 @@ from classes.customerorder import CustomerOrder
 from classes.userlogin import Userlogin
 from subs.apps_gform import apps_gform
 from subs.apps_subform import apps_subform
-from subs.apps_plot import apps_plot
-from subs.apps_plotly import apps_plotly
-from subs.apps_userlogin import apps_userlogin
+from subs.apps_plotly import apps_plotly 
+from subs.apps_userlogin import apps_userlogin 
 
 app = Flask(__name__)
+
 
 Category.read(filename + 'trabalho.db')
 OrderProduct.read(filename + 'trabalho.db')
@@ -47,15 +47,13 @@ def gform(cname):
 @app.route("/subform/<cname>", methods=["post","get"])
 def subform(cname):
     return apps_subform(cname)
-@app.route("/plot", methods=["post","get"])
-def plot():
-    return apps_plot()
 @app.route("/plotly", methods=["post","get"])
 def plotly():
     return apps_plotly()
 @app.route("/Userlogin", methods=["post","get"])
 def userlogin():
     return apps_userlogin()
+
 if __name__ == '__main__':
     app.run()
 
