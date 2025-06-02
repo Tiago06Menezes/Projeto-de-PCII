@@ -42,7 +42,7 @@ while op != 'q':
     elif op == 'e':
         test_class.last()
     elif op == 'i':
-        # Cria um objeto temporário para obter os atributos se a lista estiver vazia
+        
         if len(test_class.lst) == 0:
             p_temp = test_class.from_string(ob)
             str_list = list(p_temp.__dict__.keys())
@@ -51,14 +51,13 @@ while op != 'q':
             p = test_class.current()
             str_list = list(p.__dict__.keys())
     
-        # Coleta os dados do novo produto
         print('Deixe em branco para auto-incrementar')
         values = []
         for attrib in str_list:
             field_name = attrib[1:]  # Remove o underscore (ex: '_id' vira 'id')
             value = input(f"{field_name} = ")
             
-            # Trata campos numéricos
+           
             if field_name in ['id', 'price', 'category_id']:
                 value = int(value) if value else 0
             values.append(str(value))
